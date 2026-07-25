@@ -17,6 +17,7 @@ Each top-level folder is one skill, defined by a `SKILL.md` with YAML frontmatte
 | [`herdr`](herdr/) | Drives Herdr, a terminal multiplexer for coding agents — inspect and control panes, tabs, and workspaces, run commands, and start/monitor agents. Requires `HERDR_ENV=1`. |
 | [`learn`](learn/) | Extracts non-obvious learnings from the current session into `AGENTS.md` files, placed as close to the relevant code as possible. |
 | [`noteday`](noteday/) | Logs the day's work (summary + tickets touched) to the personal Notion "Daily Log" database. Runs on Haiku; triggered by `/noteday`. |
+| [`objfw`](objfw/) | Opinionated guide for writing, reviewing, and testing Objective-C with ObjFW, using ARC by default and ObjFW-native APIs. |
 | [`pr-writer`](pr-writer/) | Drafts a pull request title and description from the current branch's diff and commit history, following the repo's PR template if one exists. |
 | [`release-notes`](release-notes/) | Drafts categorized release notes or changelog entries from a commit or tag range. |
 | [`review-pass`](review-pass/) | Portable, checklist-driven review of a diff or PR for correctness, security, simplification, and test coverage — for agents without a built-in review command. |
@@ -57,6 +58,9 @@ Reviews the current session for non-obvious, durable discoveries (hidden relatio
 
 ### `noteday`
 Upserts today's entry in the Notion "Daily Log" database — verifies the target workspace, optionally pulls ticket activity from a connected issue tracker, drafts a one-paragraph summary, and creates or updates the row so there's no duplicate.
+
+### `objfw`
+A source-backed ObjFW coding guide that defaults application and library code to ARC with exception-safe unwinding, prefers matching class factories and designated initializers, and routes deeper guidance for API design, core types, I/O and run loops, testing, build integration, and portability through focused references.
 
 ### `pr-writer`
 Drafts a PR title and body from the full commit range against the base branch, not just the latest commit — always following the repo's `.github/pull_request_template.md` when one exists, since PR structure should match repo convention rather than a fixed default. Presents the draft rather than running `gh pr create` or pushing.
