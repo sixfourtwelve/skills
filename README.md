@@ -8,6 +8,7 @@ Each top-level folder is one skill, defined by a `SKILL.md` with YAML frontmatte
 
 | Skill | What it is |
 | --- | --- |
+| [`ada`](ada/) | Opinionated, source-backed guide for modern Ada 2022 applications and libraries, with GNAT/GPRbuild/Alire defaults and incremental SPARK verification. |
 | [`bro`](bro/) | Restates the agent's last message in plain, jargon-free language — one human talking to another. User-invoked only (`disable-model-invocation`). |
 | [`commit-msg`](commit-msg/) | Writes a commit message for staged changes using Conventional Commits. |
 | [`duplicate-pr`](duplicate-pr/) | Searches open PRs on the current repo for ones that might already address the same thing as the current branch/PR. |
@@ -22,6 +23,9 @@ Each top-level folder is one skill, defined by a `SKILL.md` with YAML frontmatte
 | [`release-notes`](release-notes/) | Drafts categorized release notes or changelog entries from a commit or tag range. |
 | [`review-pass`](review-pass/) | Portable, checklist-driven review of a diff or PR for correctness, security, simplification, and test coverage — for agents without a built-in review command. |
 | [`yeetslop`](yeetslop/) | Strips AI-generated slop (inconsistent comments, needless defensive code, `any` casts, stray emoji) out of the current branch's diff. User-invoked only. |
+
+### `ada`
+A production-oriented Ada guide that starts with semantic types, private package boundaries, contracts, deliberate ownership, and compiler/runtime version gating. Its focused references cover language/API design, controlled finalization and access types, strings and containers, contracts and incremental SPARK/GNATprove, tasking and Ada 2022 parallelism, Alire/GPRbuild/AUnit tooling, and C interoperability/portability. GNAT, GPRbuild, and Alire are the default workflow without making implementation-specific facilities part of portable APIs or imposing safety-critical restrictions universally.
 
 ### `bro`
 Restate the previous message more simply and concisely, dropping jargon. Invoked explicitly rather than chosen by the model.
